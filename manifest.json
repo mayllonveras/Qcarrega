@@ -1,0 +1,28 @@
+ {
+    "name": "Qcarrega",
+    "short_name" : "Qcarrega",
+    "description" : "Carrega Q-academico",
+    "version": "1.0",
+    "manifest_version": 2,
+    "icons": { "16": "q16.png",
+           "48": "q48.png",
+          "128": "q128.png" },
+    "page_action": {
+      "default_icon": "q.png"
+    },
+    "permissions": [ 
+        "tabs",
+        "declarativeContent"
+    ],
+    "background": {
+        "scripts": ["background.js"],
+        "persistent": false
+    },
+    "content_scripts": [ {
+        "js": [ "inject/jquery.js", "inject/qcarrega.js" ],
+        "css": [ "inject/qcarrega.css" ],
+        "matches": [ 	"https://academico.ifpi.edu.br/qacademico/index.asp?t=3066*",
+        				"https://academico.ifpi.edu.br/qacademico/index.asp?t=3068&ACAO=LANCAR*" ]
+    } ]
+  
+  }
