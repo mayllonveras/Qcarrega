@@ -1,4 +1,4 @@
-.button_export, .button_import, #filename {
+.button_export, .button_import, #notas, #carregaAula, .button_aula{
     background-color: #4CAF50;
     border: none;
     color: white;
@@ -14,8 +14,15 @@
 
 }
 
-.button_export, #carregaNotas{
+.button_export, #carregaNotas, #carregaAula{
     position: fixed;
 	right: 10px;
 	top: 10px;
 }
+
+.button_aula{
+    position: fixed;
+	right: 450px;
+	top: 10px;
+}
+
